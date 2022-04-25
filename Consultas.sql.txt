@@ -1,0 +1,63 @@
+
+-- para generar archivos
+
+touch miarchivo.php
+
+-- para limpiar pantall 
+
+ctrl + l
+
+-- dar inicio al proyecto te va crear una carpeta .git en modo oculto, una sola vez por 
+--poryecto que tengas
+
+git init
+
+-- Para hacer seguimiento en GITHUB
+git status
+
+-- PARA AÑADIR UN SOLO ARCHIVO A LA VEZ
+git add miarchivo.php
+
+-- PARA AÑADIR TODO LOS ARCHIVOS
+git add .
+
+-- Para empaquetar los que estan en la zona stach
+git commit -m "agregarmensaje"
+
+-- PARA DETECTAR CAMBIOS
+git status
+
+
+--PARA VER QUE CAMBIOS EXACTOS ENTRE EL COMMIT ANTERIOR Y EL ARCHIVO MODIFICADO EN EL STAGE
+git diff
+
+
+-- Como eliminar un archivo(query.txt) de sTAGES
+git reset HEAD query.txt
+
+
+-- DESHACER EL COMMIT y regresar al anterior COMMIT
+git checkout .
+
+--VER HISTORIAL DE CAMBIOS
+
+git log
+
+-- PARA REGRESAR A UNA VERSION ESPECIFICA. Tenemos que sacar el hash, cada uno de los
+--commit tiene su propio commit. sacar con git log
+
+git checkout 23df62a26d3c1ddb95cd3fb6305eefa87d42fb42
+
+-- PARA SEGUIR TARTRABAJANDO EN EL COMIT RESTAURADO
+git checkout master
+
+
+
+-- como sincronizar GIT con GITHUB - en github sin readme y publico.
+--añadimos el comando con la url creada en e hithub
+
+git remote add origin https://github.com/cesarhuamanicastro/Renting.git
+
+-- PARA QUE SINCRONIZE CON EL GITHUB DE LA WEB.
+
+git push -u origin master
